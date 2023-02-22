@@ -1,11 +1,14 @@
+import unittest
 
-def test_file1_method1():
-    x=5
-    y=6
-    assert x+1 == y, "test failed"
-    assert x == y, "test failed"
+def fun(x):    
+    return x+1 
 
-def test_file1_method2():
-    x=5
-    y=6
-    assert x+1 == y, "test failed"
+class MyTest(unittest.TestCase):
+
+    def test(self):
+
+        self.assertEqual(fun(4),5)
+
+if __name__ == '__main__':
+
+ unittest.main()
